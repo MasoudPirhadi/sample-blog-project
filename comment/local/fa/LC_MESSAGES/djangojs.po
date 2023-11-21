@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-11 01:42+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:224
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:383
+msgid "Replies"
+msgstr "پاسخ"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:226
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:385
+msgid "Reply"
+msgstr "پاسخ"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:243
+msgid "Unable to post your comment!, please try again"
+msgstr "نمی توان نظر خود را ارسال کرد! لطفا دوباره امتحان کنید"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:269
+msgid "You can't edit this comment"
+msgstr "شما نمی توانید این نظر را ویرایش کنید"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:297
+msgid "Modification didn't take effect!, please try again"
+msgstr "اصلاح نشد!، لطفاً دوباره امتحان کنید"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:346
+msgid "Deletion cannot be performed!, please try again"
+msgstr "حذف انجام نمی شود! لطفا دوباره امتحان کنید"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:393
+msgid "Unable to delete your comment!, please try again"
+msgstr "نمی توان نظر شما را حذف کرد، لطفا دوباره امتحان کنید"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:459
+msgid "Reaction couldn't be processed!, please try again"
+msgstr "واکنش پردازش نشد!، لطفاً دوباره امتحان کنید"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:508
+msgid "Subscription couldn't be processed!, please try again"
+msgstr "اشتراک قابل پردازش نیست! لطفاً دوباره امتحان کنید"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:559
+msgid "Blocking this user couldn't be processed!, please try again"
+msgstr "مسدود کردن این کاربر قابل پردازش نیست!، لطفاً دوباره امتحان کنید"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:672
+msgid "Flagging couldn't be processed!, please try again"
+msgstr "گزارش پردازش نشد!، لطفاً دوباره امتحان کنید"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:718
+msgid "read more ..."
+msgstr "ادامه..."
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:720
+msgid "read less"
+msgstr "بستن"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:753
+msgid "Flag rejected"
+msgstr "گزارش رد شد"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:754
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:772
+msgid "Reject the flag"
+msgstr "گزارش را رد کنید"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:759
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:767
+msgid "Resolve the flag"
+msgstr "گزارش را ببندید"
+
+#: .\venv\Lib\site-packages\comment\static\js\comment.js:766
+msgid "Flag resolved"
+msgstr "گزارش بسته شد"

@@ -1,0 +1,67 @@
+{% extends 'blog_project/base.html' %}
+{% load comment_tags %}
+{% load static %}
+{% load ratings %}
+{% load article_tags %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% load sorl_thumbnail %}
+{% load i18n %}
+
+
+{% block title %}{% trans 'article detail' %}{% endblock %}
+
+
+{% block content %}
+    <div class="col-lg-8 posts-list">
+                <div class="single-post">
+                    <div class="feature-img">
+                        <img class="img-fluid" src="{{ article_detail.image.url }}" alt="">
+                    </div>
+                    <div class="blog_details">
+                        <h2>{{ article_detail.title }}</h2>
+                        <ul class="blog-info-link mt-3 mb-4">
+                            <li><a href="#"><i
+                                    class="fa fa-user"></i> {{ article_detail.author.get_full_name_or_username }}
+                            </a> <br>
+                                <a>
+                                    <i class="fa fa-eye"></i>&nbsp;&nbsp;{{ article.hits.count }}
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="excert">
+                            {% if user.is_authenticated and user.is_special_user or user == article_detail.author or user.is_superuser %}
+                                {{ article_detail.text | safe }}
+                                {% elif not article_detail.is_special %}
+                                {{ article_detail.text | safe }}
+                            {% else %}
+                                <p>{{ article_detail.text|truncatewords:"70"|safe }}</p>
+                                <br>
+                                <span class="alert alert-warning">{% trans 'To view this article you must' %} <a class="alert alert-link"
+                                                                                                href="#">{% trans 'Special subscription' %}</a> {% trans 'provide.' %} </span>
+                            {% endif %}
+                        </p>
+                    </div>
+                    {% ratings article_detail %}
+                </div>
+                <div class="blog-author">
+                    <div class="media align-items-center">
+                        {% if article_detail.author.image %}
+                            <img src="{{ article_detail.author.image.url }}" alt="">
+                        {% else %}
+                            <img src="/medias/profile/avatar.png" alt="">
+                        {% endif %}
+                        <div class="media-body">
+                            <a href="#">
+                                <h4>{{ article_detail.author.get_full_name_or_username }}</h4>
+                            </a>
+                            <p>توضیحات راجبه نویسنده که باید مدلسازی بشه</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments-area">
+                    {% render_comments article_detail request %}
+                    {% include_bootstrap %}
+                </div>
+            </div>
+{% endblock %}

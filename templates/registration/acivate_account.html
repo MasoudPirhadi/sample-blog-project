@@ -1,0 +1,15 @@
+{% autoescape off %}
+
+
+{{ user.get_full_name_or_username }} عزیز خوش آمدید
+
+----------------------------------
+
+ثبتنام شما موفقیت آمیز بود. برای فعالسازی حساب کاربری خود روی لینک زیر کلیک کنید:
+
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+
+تیم EvilSick
+
+{% endautoescape %}

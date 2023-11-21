@@ -1,0 +1,29 @@
+{% extends 'blog_project/base.html' %}
+{% load static %}
+
+{% block header_refrence %}
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}">
+{% endblock %}
+
+{% block title %}
+{{ article.title}}
+{% endblock %}
+
+{% block content %}
+    <section id="summary">
+        <h2>{{ article.title }}</h2>
+        <article>
+            <img src="{{ article.image.url }}" alt={{ article.title }}>
+            <address>By {{ article.author }}</address>
+            <div>
+                last update in
+                <time>{{ article.create_date| date:'d M Y ' }}</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        {{ article.text| safe }}
+    </main>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'registration/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% block meta-title %}
+    حذف مقاله
+{% endblock %}{% endblock %}
+{% block content %}
+    <div class="col-md-8 mx-auto">
+        <!-- general form elements -->
+        <div class="card card-danger">
+            <div class="card-header">
+                <h3 class="card-title mb-0 float-left">حذف مقاله</h3>
+            </div>
+            <div class="card-body py-4 text-center">
+                <!-- /.card-header -->
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                        <span>آیا از حذف مقاله با عنوان «{{ object }}» از «{{ object.author.get_full_name_or_username }}» اطمینان دارید؟ </span><br><br>
+                    <button type="submit" value="حذف" class="btn btn-danger">حذف</button>
+                </form>
+            </div>
+        </div>
+{% endblock %}

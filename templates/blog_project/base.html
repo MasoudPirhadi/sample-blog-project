@@ -1,0 +1,171 @@
+{% load sorl_thumbnail %}
+{% load static %}
+{% load ratings %}
+{% load article_tags %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<!doctype html>
+<html class="no-js" lang="{{ LANGUAGE_CODE|default:"fa" }}" {% if not LANGUAGE_CODE == 'fa' %}dir="rtl"{% endif %}>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}{% trans 'articles' %}{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/blog/img/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/static/blog/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/blog/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/blog/css/slicknav.css">
+    <link rel="stylesheet" href="/static/blog/css/animate.min.css">
+    <link rel="stylesheet" href="/static/blog/css/price_rangs.css">
+    <link rel="stylesheet" href="/static/blog/css/magnific-popup.css">
+    <link rel="stylesheet" href="/static/blog/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/static/blog/css/themify-icons.css">
+    <link rel="stylesheet" href="/static/blog/css/slick.css">
+    <link rel="stylesheet" href="/static/blog/css/nice-select.css">
+    <link rel="stylesheet" href="/static/blog/css/style.css">
+    <link rel="stylesheet" href="/static/blog/css/responsive.css">
+    {% if LANGUAGE_CODE == 'fa' %}
+        <link rel="stylesheet" href="/static/blog/css/style.rtl.css">
+    {% endif %}
+
+        <!-- for star ratings -->
+    <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+    <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+</head>
+
+<body>
+<!-- Preloader Start -->
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="/static/blog/img/logo/logo.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Preloader Start-->
+<header>
+    <!-- Header Start -->
+    <div class="header-area header-transparrent">
+        <div class="headder-top header-sticky">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-2">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="{% url 'articles_list' %}"><img src="/static/blog/img/logo/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9">
+                        <div class="menu-wrapper">
+                            <!-- Main-menu -->
+                            <div class="main-menu">
+                                <nav class="d-none d-lg-block">
+                                    <ul id="navigation">
+                                        <li><a href="{% url 'articles_list' %}">{% trans 'articles' %}</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- Header-btn -->
+                            <div class="header-btn d-none f-right d-lg-block">
+                                {% if user.is_authenticated %}
+                                    <span> خوش آمدید {{ user.get_full_name_or_username }} عزیز </span>
+                                    <a class="badge badge-danger" href="{% url 'logout' %}">خروج</a>
+                                    {% else %}
+                                    <a href="{% url 'register' %}" class="btn head-btn1">{% trans 'SignUp' %}</a>
+                                <a href="{% url 'login' %}" class="btn head-btn2">{% trans 'Login' %}</a>
+                                {% endif %}
+                                <a href="{% url 'change-language' %}?lang=&next=/en/{{ request.path|slice:'4:' }}" class="btn-info">{% trans 'EN' %}</a>
+                                <a href="{% url 'change-language' %}?lang=&next=/fa/{{ request.path|slice:'4:' }}" class="btn-success">{% trans 'FA' %}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+</header>
+<!-- Hero Area Start-->
+<div class="slider-area ">
+    <div class="single-slider section-overly slider-height2 d-flex align-items-center"
+         data-background="/static/blog/img/hero/about.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center">
+                        <h2>{% trans 'articles list' %}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero Area End -->
+<!--================Blog Area =================-->
+<section class="blog_area section-padding single-post-area" >
+    <div class="container">
+        <div class="row">
+            {% block content %}{% endblock %}
+            <div class="col-lg-4">
+
+                {% sidebar_article %}
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--================Blog Area =================-->
+
+{% include 'article_module/includes/footer.html' %}
+
+<!-- JS here -->
+
+<!-- All JS Custom Plugins Link Here here -->
+<script src="/static/blog/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="/static/blog/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="/static/blog/js/popper.min.js"></script>
+<script src="/static/blog/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="/static/blog/js/jquery.slicknav.min.js"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="/static/blog/js/owl.carousel.min.js"></script>
+<script src="/static/blog/js/slick.min.js"></script>
+<script src="/static/blog/js/price_rangs.js"></script>
+
+<!-- One Page, Animated-HeadLin -->
+<script src="/static/blog/js/wow.min.js"></script>
+<script src="/static/blog/js/animated.headline.js"></script>
+
+<!-- Scrollup, nice-select, sticky -->
+<script src="/static/blog/js/jquery.scrollUp.min.js"></script>
+<script src="/static/blog/js/jquery.nice-select.min.js"></script>
+<script src="/static/blog/js/jquery.sticky.js"></script>
+<script src="/static/blog/js/jquery.magnific-popup.js"></script>
+
+<!-- contact js -->
+<script src="/static/blog/js/contact.js"></script>
+<script src="/static/blog/js/jquery.form.js"></script>
+<script src="/static/blog/js/jquery.validate.min.js"></script>
+<script src="/static/blog/js/mail-script.js"></script>
+<script src="/static/blog/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Jquery Plugins, main Jquery -->
+<script src="/static/blog/js/plugins.js"></script>
+<script src="/static/blog/js/main.js"></script>
+
+</body>
+</html>

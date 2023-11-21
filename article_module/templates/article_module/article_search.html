@@ -1,0 +1,77 @@
+{% extends 'blog_project/base.html' %}
+{% load sorl_thumbnail %}
+{% load static %}
+{% load ratings %}
+{% load article_tags %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+
+{% comment %}{% block title %}{% endblock %}{% endcomment %}
+
+
+{% block content %}
+    <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="blog_left_sidebar">
+        <p class="alert alert-info text-center">{% trans 'Search' %}: {{ search }}</p>
+            {% for article in object_list %}
+                <article class="blog_item">
+                    <div class="blog_item_img">
+                        <img class="card-img rounded-0" src="{{ article.image.url }}" height="220" alt="">
+                        <a href="#" class="blog_item_date">
+                            <h3>{{ article.create_date|date:'d' }}</h3>
+                            <p>{{ article.create_date|date:'M' }}</p>
+                        </a>
+                    </div>
+
+                    <div class="blog_details">
+                        <a class="d-inline-block" href="{% url 'articles_detail' article.pk %}">
+                            <h2>{{ article.title }}</h2>
+                        </a>
+                        {% if article.is_special %}
+                            <span class="badge badge-danger">{% trans 'special' %}</span>
+                        {% endif %}
+                        <p>{{ article.text|truncatewords:'70'|safe }}</p>
+                        {% ratings article %}
+                        <ul class="blog-info-link">
+                            <li><a href="#"><i
+                                    class="fa fa-user"></i> {{ article.author.get_full_name_or_username }}</a><br>
+                                <a>
+                                    <i class="fa fa-eye"></i>&nbsp;&nbsp;{{ article.hits.count }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                {% empty %}
+                <p class="alert alert-warning">{% trans '! result not found'|title %}</p>
+            {% endfor %}
+
+        {% if is_paginated %}
+            <nav class="blog-pagination justify-content-center d-flex">
+                <ul class="pagination">
+                    {% if page_obj.has_previous %}
+                        <li class="page-item">
+                        <a href="?q={{ search }}&page={{ page_obj.previous_page_number }}" class="page-link" aria-label="Previous">
+                            <i class="{% if LANGUAGE_CODE == 'fa' %}ti-angle-left {% else %}ti-angle-right{% endif %}"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% for page in paginator %}
+                        <li class="page-item">
+                        <a href="?q={{ search }}&page={{ page.number }}" class="page-link">{{ page.number }}</a>
+                    </li>
+                    {% endfor %}
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a href="?q={{ search }}&page={{ page_obj.next_page_number }}" class="page-link" aria-label="Next">
+                            <i class="{% if LANGUAGE_CODE == 'fa' %}ti-angle-right {% else %}ti-angle-left{% endif %}"></i>
+                        </a>
+                    </li>
+                {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}

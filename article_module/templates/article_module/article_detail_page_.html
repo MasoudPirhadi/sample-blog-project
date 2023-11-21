@@ -1,0 +1,75 @@
+{% extends 'blog_project/base.html' %}
+{% load comment_tags %}
+
+
+{% block title %}
+    جزئیات مقاله
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="blog-post-area">
+                        <h2 class="title text-center">{{ article_detail.title }}</h2>
+                        <div class="single-blog-post">
+                            <h3>{{ article_detail.title }}</h3>
+                            {% if article_detail.is_special %}
+                                <span class="badge badge-danger">ویژه</span>
+                            {% endif %}
+                            <div class="post-meta">
+                                <ul>
+                                    {% if article_detail.author is not None %}
+                                        <li><i class="fa fa-user"></i> {{ article_detail.author }}</li>
+                                    {% endif %}
+                                    <li><i class="fa fa-clock-o"></i>{{ article_detail.create_date }}</li>
+                                    <li><i class="fa fa-calendar"></i> {{ article_detail.create_date.date }}
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="">
+                                <img src="{{ article_detail.image.url }}" alt="">
+                            </a>
+                            <span>
+                                {% if user.is_authenticated and user.is_special_user or user == article_detail.author or user.is_superuser %}
+                                    {{ article_detail.text | safe }}
+                                    {% else %}
+                                    <p>{{ article_detail.short_description|striptags|linebreaks }}</p>
+                                    <br><span class="alert alert-warning">برای مشاهده این مقاله باید <a class="alert alert-link" href="#">اشتراک ویژه</a> تهیه کنید. </span>
+                                {% endif %}
+                            </span>
+                            <div class="pager-area">
+                            </div>
+                        </div>
+                    </div><!--/blog-post-area-->
+
+                    {% if article_detail.author %}
+                        <div class="media commnets">
+                            <div class="media-body">
+                                <h4 class="media-heading">نویسنده: {{ article_detail.author }}</h4>
+                                <p>{{ article_detail.author.about_user }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <!--Comments-->
+                {% render_comments article_detail request %}
+                {% include_bootstrap %}
+                {% include_static %}
+
+                <div class="col-sm-3">
+                    <div class="left-sidebar">
+
+                        {% for banner in banners %}
+                        <div class="shipping text-center"><!--shipping-->
+                        </div><!--/shipping-->
+                            <br>
+                    {% endfor %}
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

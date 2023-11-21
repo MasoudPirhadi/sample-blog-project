@@ -1,0 +1,113 @@
+{% load humanize %}
+{% load i18n %}
+
+
+<div class="blog_right_sidebar">
+    <aside class="single_sidebar_widget search_widget">
+        <form action="{% url 'search' %}">
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input type="text" required class="form-control" placeholder='Search Keyword' name="q"
+                           onfocus="this.placeholder = ''"
+                           onblur="this.placeholder = 'Search Keyword'">
+                    <div class="input-group-append">
+                        <button class="btns" type="submit"><i class="ti-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </aside>
+
+    <aside class="single_sidebar_widget post_category_widget">
+        <h4 class="widget_title">{% trans 'best view in month' %}</h4>
+        <ul class="list cat-list">
+            {% for view in more_view_article %}
+                <li>
+                    <a href="{% url 'articles_detail' view.pk %}" class="d-flex">
+                        <p>{{ view.title |truncatewords:'6' }}</p>&nbsp;
+                        <p>({{ view.hits.count }})</p>
+                    </a>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </aside>
+
+    <aside class="single_sidebar_widget popular_post_widget">
+        <h3 class="widget_title">{% trans 'hot articles in month' %}</h3>
+        {% for hot in hot_article %}
+            <div class="media post_item">
+                <img src="{{ hot.image.url }}" alt="post" width="80">
+                <div class="media-body">
+                    <a href="{% url 'articles_detail' hot.pk %}">
+                        <h3>{{ hot.title |truncatewords:'6' }}</h3>
+                    </a>
+                    <p>{{ hot.create_date | naturaltime }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </aside>
+    <aside class="single_sidebar_widget tag_cloud_widget">
+        <h4 class="widget_title">{% trans 'best article in month' %}</h4>
+        <ul class="list">
+            {% for rate in rating_article %}
+                <li>
+                    <a href="{% url 'articles_detail' rate.pk %}">{{ rate.title |truncatewords:'6' }}</a>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </aside>
+
+
+    <aside class="single_sidebar_widget instagram_feeds">
+        <h4 class="widget_title">Instagram Feeds</h4>
+        <ul class="instagram_row flex-wrap">
+            <li>
+                <a href="#">
+                    <img class="img-fluid" src="/static/blog/img/post/post_5.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-fluid" src="/static/blog/img/post/post_6.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-fluid" src="/static/blog/img/post/post_7.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-fluid" src="/static/blog/img/post/post_8.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-fluid" src="/static/blog/img/post/post_9.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="img-fluid" src="/static/blog/img/post/post_10.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+
+    <aside class="single_sidebar_widget newsletter_widget">
+        <h4 class="widget_title">Newsletter</h4>
+
+        <form action="#">
+            <div class="form-group">
+                <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
+            </div>
+            <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                    type="submit">Subscribe
+            </button>
+        </form>
+    </aside>
+</div>

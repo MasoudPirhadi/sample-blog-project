@@ -1,0 +1,51 @@
+{% extends 'blog_project/base.html' %}
+{% load static %}
+
+{% block header_refrence %}
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">{% endblock %}
+
+{% block title %}My Blog{% endblock %}
+
+{% block content %}
+    <section id="welcome">
+        <header>
+            <img src="{% static 'images/master.jpg' %}" alt="Masoud is working">
+            <h2>Working Blog Project</h2>
+        </header>
+        <p>Hi Welcome to my project!</p>
+    </section>
+    <section id="latest-posts">
+        <h2>Latest Posts</h2>
+    <ul>
+        {% for article in articles %}
+            {% include 'blog/includes/post.html' %}
+        {% endfor %}
+    </ul>
+    </section>
+    <section id="about">
+        <article class="about">
+            <h2>What I Do</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque cupiditate, eaque eligendi et fugiat
+                nobis provident quos repellendus repudiandae sint.</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam culpa distinctio ea hic
+                itaque quam reiciendis rem similique tenetur!
+                Accusantium ad animi commodi consequatur culpa debitis deserunt dolor doloribus et explicabo fugit,
+                harum id impedit inventore, ipsam labore nisi voluptatum?
+                nulla numquam placeat, possimus provident quaerat quam quasi quidem quod ratione reiciendis
+                reprehenderit repudiandae sint temporibus ut vitae voluptates
+            </p>
+        </article>
+    </section>
+    <section id="join-us">
+        <header>
+            <h2>Join Us My Channel</h2>
+            <ul>
+                <a href=""><img src="{% static 'images/telegram-logo-944.png' %}" width="35" alt="telegram"></a>
+                <a href=""><img src="{% static 'images/youtube-logo-png-31812.png' %}" width="35" alt="telegram"></a>
+            </ul>
+        </header>
+
+    </section>
+
+{% endblock %}

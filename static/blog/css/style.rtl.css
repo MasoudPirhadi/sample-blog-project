@@ -1,0 +1,68 @@
+@import url('https://v1.fontapi.ir/css/Sahel');
+
+
+body {
+    font-family: Sahel, sans-serif !important;
+    text-align: right !important;
+}
+
+#navigation a {
+    text-decoration: none;
+}
+
+span, p {
+    font-family: Sahel, sans-serif !important;
+    text-decoration: none;
+}
+
+.media.align-items-center img {
+    margin: 0;
+}
+
+.media-body {
+    flex: 1;
+    padding: 0 26px !important;
+}
+
+.menu-right {
+    float: right;
+    text-align: right;
+}
+
+ul.list.cat-list {
+    direction: rtl !important;
+}
+
+.blog_right_sidebar {
+    direction: rtl !important;
+}
+
+section#comments {
+    direction: rtl;
+    padding: 0 25px;
+}
+
+.blog-author {
+    direction: rtl !important;
+}
+
+.blog-info-link {
+    direction: rtl !important;
+}
+
+.blog_right_sidebar {
+    direction: rtl !important;
+}
+
+.star-ratings {
+    direction: rtl !important;
+}
+
+aside.single_sidebar_widget.search_widget {
+    direction: rtl;
+    text-align: right;
+}
+
+.blog_details {
+    direction: rtl;
+}

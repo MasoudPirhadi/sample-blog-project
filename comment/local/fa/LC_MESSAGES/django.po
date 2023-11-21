@@ -1,0 +1,783 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-11 01:42+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\venv\Lib\site-packages\comment\apps.py:9
+msgid "comment"
+msgstr "ارسال"
+
+#: .\venv\Lib\site-packages\comment\conf\defaults.py:14
+msgid "Spam | Exists only to promote a service"
+msgstr "هرزنامه | فقط برای تبلیغ یک سرویس وجود دارد."
+
+#: .\venv\Lib\site-packages\comment\conf\defaults.py:15
+msgid "Abusive | Intended at promoting hatred"
+msgstr "توهین آمیز | با هدف ترویج فحاشی"
+
+#: .\venv\Lib\site-packages\comment\managers\flags.py:23
+msgid "Something else"
+msgstr "موارد دیگر"
+
+#: .\venv\Lib\site-packages\comment\messages.py:7
+msgid "Comment App: LOGIN_URL is not in the settings"
+msgstr "Comment App: LOGIN_URL در تنظیمات نیست"
+
+#: .\venv\Lib\site-packages\comment\messages.py:8
+msgid "Comment App: You must be logged in to perform this action."
+msgstr "Comment App: برای انجام این عمل باید وارد سیستم شوید."
+
+#: .\venv\Lib\site-packages\comment\messages.py:9
+msgid "You do not have permission to perform this action."
+msgstr "شما اجازه انجام این عمل را ندارید."
+
+#: .\venv\Lib\site-packages\comment\messages.py:10
+#, python-brace-format
+msgid ""
+"Your {class_name} class has not defined a {method_name} method, which is "
+"required."
+msgstr ""
+"کلاس {class_name} شما یک روش {method_name} را تعریف نکرده است، "
+"که لازم است."
+
+#: .\venv\Lib\site-packages\comment\messages.py:11
+msgid "Only AJAX request are allowed"
+msgstr "فقط درخواست AJAX مجاز است"
+
+#: .\venv\Lib\site-packages\comment\messages.py:20
+msgid "Comment App: settings var COMMENT_WRAP_CONTENT_WORDS must be an integer"
+msgstr "Comment App: تنظیمات COMMENT_WRAP_CONTENT_WORDS باید یک عدد صحیح باشد"
+
+#: .\venv\Lib\site-packages\comment\messages.py:24
+msgid "error"
+msgstr "خطا"
+
+#: .\venv\Lib\site-packages\comment\messages.py:25
+msgid "Bad Request"
+msgstr "درخواست نامعتبر"
+
+#: .\venv\Lib\site-packages\comment\messages.py:29
+#, python-brace-format
+msgid "{var_name} id must be an integer, {id} is NOT"
+msgstr "شناسه {var_name} باید یک عدد صحیح باشد، {id} نیست"
+
+#: .\venv\Lib\site-packages\comment\messages.py:30
+msgid "app name must be provided"
+msgstr "نام برنامه باید ارائه شود"
+
+#: .\venv\Lib\site-packages\comment\messages.py:31
+#, python-brace-format
+msgid "{app_name} is NOT a valid app name"
+msgstr "{app_name} نام برنامه معتبر نیست"
+
+#: .\venv\Lib\site-packages\comment\messages.py:32
+msgid "model name must be provided"
+msgstr "نام مدل باید ارائه شود"
+
+#: .\venv\Lib\site-packages\comment\messages.py:33
+#, python-brace-format
+msgid "{model_name} is NOT a valid model name"
+msgstr ""
+
+#: .\venv\Lib\site-packages\comment\messages.py:34
+msgid "model id must be provided"
+msgstr "{model_name} نام مدل معتبر نیست"
+
+#: .\venv\Lib\site-packages\comment\messages.py:35
+#, python-brace-format
+msgid "{model_id} is NOT a valid model id for the model {model_name}"
+msgstr "{model_id} یک شناسه مدل معتبر برای مدل {model_name} نیست"
+
+#: .\venv\Lib\site-packages\comment\messages.py:36
+#, python-brace-format
+msgid ""
+"{parent_id} is NOT a valid id for a parent comment or the parent comment "
+"does NOT belong to the provided model object"
+msgstr ""
+"{parent_id} یک شناسه معتبر برای نظر والد نیست یا نظر والد "
+"به شی مدل ارائه شده تعلق ندارد"
+
+#: .\venv\Lib\site-packages\comment\messages.py:41
+msgid "Flagging system must be enabled"
+msgstr "سیستم گزارش دهی باید فعال باشد"
+
+#: .\venv\Lib\site-packages\comment\messages.py:42
+msgid "Object must be flagged!"
+msgstr "شی باید گزارش شود!"
+
+#: .\venv\Lib\site-packages\comment\messages.py:43
+#, python-brace-format
+msgid "{state} is an invalid state"
+msgstr "{state} یک حالت نامعتبر است"
+
+#: .\venv\Lib\site-packages\comment\messages.py:44
+#, python-brace-format
+msgid "{reason} is an invalid reason"
+msgstr "{reason} دلیلی نامعتبر است"
+
+#: .\venv\Lib\site-packages\comment\messages.py:45
+msgid "Please supply some information as the reason for flagging"
+msgstr "لطفاً برخی از اطلاعات را به عنوان دلیل گزارش ارائه کنید"
+
+#: .\venv\Lib\site-packages\comment\messages.py:46
+#, python-brace-format
+msgid "This comment is already flagged by this user ({user})"
+msgstr "این نظر قبلاً توسط این کاربر ({user}) گزارش شده است"
+
+#: .\venv\Lib\site-packages\comment\messages.py:47
+#, python-brace-format
+msgid "This comment was not flagged by this user ({user})"
+msgstr "این نظر توسط این کاربر ({user}) گزارش نشده است"
+
+#: .\venv\Lib\site-packages\comment\messages.py:48
+msgid "This action cannot be applied on unflagged comments"
+msgstr "این عمل را نمی توان روی نظرات بدون گزارش اعمال کرد"
+
+#: .\venv\Lib\site-packages\comment\messages.py:49
+msgid "The comment must be edited before resolving the flag"
+msgstr "نظر باید قبل از رفع گزارش ویرایش شود"
+
+#: .\venv\Lib\site-packages\comment\messages.py:50
+msgid "Unable to change flag state at the moment!"
+msgstr "در حال حاضر امکان تغییر وضعیت گزارش وجود ندارد!"
+
+#: .\venv\Lib\site-packages\comment\messages.py:54
+#, python-brace-format
+msgid ""
+"Reaction must be an valid ReactionManager.RelationType. {reaction_type} is "
+"not"
+msgstr ""
+"Reaction باید ReactionManager.RelationType معتبر باشد. {reaction_type} "
+"نیست"
+
+#: .\venv\Lib\site-packages\comment\messages.py:58
+#: .\venv\Lib\site-packages\django\core\validators.py:176
+msgid "Enter a valid email address."
+msgstr "یک آدرس ایمیل معتبر وارد کنید."
+
+#: .\venv\Lib\site-packages\comment\messages.py:59
+msgid "Email is required for posting anonymous comments."
+msgstr "برای ارسال نظرات ناشناس ایمیل لازم است."
+
+#: .\venv\Lib\site-packages\comment\messages.py:60
+msgid "The link seems to be broken."
+msgstr "لینک به نظر خراب است."
+
+#: .\venv\Lib\site-packages\comment\messages.py:61
+msgid "The comment has already been verified."
+msgstr "نظر قبلاً تأیید شده است."
+
+#: .\venv\Lib\site-packages\comment\messages.py:65
+msgid "Comment flagged"
+msgstr "نظر گزارش شد"
+
+#: .\venv\Lib\site-packages\comment\messages.py:66
+msgid "Comment flag removed"
+msgstr "گزارش نظر حذف شد"
+
+#: .\venv\Lib\site-packages\comment\messages.py:70
+msgid "Your reaction has been updated successfully"
+msgstr "واکنش شما با موفقیت به روز شد"
+
+#: .\venv\Lib\site-packages\comment\messages.py:74
+msgid "Comment Confirmation Request"
+msgstr "درخواست تایید نظر"
+
+#: .\venv\Lib\site-packages\comment\messages.py:75
+msgid ""
+"We have sent a verification link to your email.The comment will be displayed "
+"after it is verified."
+msgstr ""
+"ما یک لینک تایید به ایمیل شما ارسال کرده ایم. پس از تایید آن "
+"نظر نمایش داده خواهد شد."
+
+#: .\venv\Lib\site-packages\comment\messages.py:77
+msgid "email address, this will be used for verification."
+msgstr "آدرس ایمیل، این برای تأیید استفاده خواهد شد."
+
+#: .\venv\Lib\site-packages\comment\messages.py:78
+msgid "email address, it will be used for verification."
+msgstr "آدرس ایمیل، از آن برای تأیید استفاده خواهد شد."
+
+#: .\venv\Lib\site-packages\comment\messages.py:79
+#, python-brace-format
+msgid "{username} added comment to \"{thread_name}\""
+msgstr "{username} نظری را به \"{thread_name}\" اضافه کرد"
+
+#: .\venv\Lib\site-packages\comment\messages.py:80
+msgid "email"
+msgstr "ایمیل"
+
+#: .\venv\Lib\site-packages\comment\messages.py:84
+msgid "Unflagged"
+msgstr "لغو گزارش"
+
+#: .\venv\Lib\site-packages\comment\messages.py:85
+msgid "Flagged"
+msgstr "گزارش شد"
+
+#: .\venv\Lib\site-packages\comment\messages.py:86
+msgid "Flag rejected by the moderator"
+msgstr "گزارش توسط مدیر رد شد"
+
+#: .\venv\Lib\site-packages\comment\messages.py:87
+msgid "Comment modified by the author"
+msgstr "نظر توسط نویسنده اصلاح شد"
+
+#: .\venv\Lib\site-packages\comment\messages.py:91
+#, python-brace-format
+msgid "Email is required to subscribe {model_object}"
+msgstr "برای اشتراک در {model_object} ایمیل لازم است"
+
+#: .\venv\Lib\site-packages\comment\messages.py:92
+msgid "Subscribe system must be enabled"
+msgstr "سیستم اشتراک باید فعال باشد"
+
+#: .\venv\Lib\site-packages\comment\messages.py:96
+msgid "Unblocked"
+msgstr "رفع مسدودی"
+
+#: .\venv\Lib\site-packages\comment\messages.py:97
+msgid "Blocked"
+msgstr "مسدود"
+
+#: .\venv\Lib\site-packages\comment\messages.py:102
+msgid "Invalid input data"
+msgstr "داده های ورودی نامعتبر است"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.html:8
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.txt:2
+msgid "Hey there,"
+msgstr "سلام،"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.html:10
+msgid ""
+"You or someone on your behalf have requested to post a comment into this "
+"page:"
+msgstr ""
+"شما یا شخصی از طرف شما درخواست کرده اید که نظری در این مورد ارسال کنید "
+"صفحه:"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.html:12
+#, python-format
+msgid "at %(posted_time)s."
+msgstr "در %(posted_time)s."
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.html:15
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.html:27
+msgid "The comment:"
+msgstr "نظر:"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.html:20
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.txt:12
+msgid ""
+"If you do not wish to post the comment, please ignore this message or report "
+"an incident to"
+msgstr ""
+"اگر مایل به ارسال نظر نیستید، لطفاً این پیام را نادیده بگیرید یا یک حادثه را "
+"به آن گزارش دهید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.html:20
+msgid "Otherwise click on the button below to confirm the comment."
+msgstr "در غیر این صورت برای تایید نظر روی دکمه زیر کلیک کنید."
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.html:29
+msgid "Confirm your comment"
+msgstr "نظر خود را تایید کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.html:38
+msgid ""
+"If clicking does not work, you can also copy the below link and paste the "
+"address into your browser's address window"
+msgstr ""
+"اگر کلیک کردن کار نکرد، می توانید لینک زیر را نیز کپی کرده "
+"و آدرس را در پنجره آدرس مرورگر خود جایگذاری کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.html:41
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.txt:17
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.html:32
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.txt:14
+msgid "Thanks for your comment!"
+msgstr "بابت نظراتتون ممنونم!"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.html:43
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.txt:20
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.html:34
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.txt:17
+msgid "Kind regards,"
+msgstr "با احترام،"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.txt:4
+msgid "You or someone on behalf of you have requested to post a comment at"
+msgstr "شما یا شخصی از طرف شما درخواست کرده اید که نظر خود را در این آدرس ارسال کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.txt:4
+msgid "to the following URL"
+msgstr "به آدرس زیر"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.txt:8
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\create_comment.html:20
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.txt:6
+msgid "Comment"
+msgstr "ارسال"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.txt:12
+msgid "Otherwise click on the link below to confirm the comment"
+msgstr "در غیر این صورت برای تایید نظر روی لینک زیر کلیک کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\confirmation_request.txt:16
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.html:31
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.txt:13
+msgid ""
+"If clicking does not work, you can also copy and paste the address into your "
+"browser's address window"
+msgstr ""
+"اگر کلیک کردن کار نکرد، می توانید آدرس را نیز در پنجره آدرس مرورگر خود "
+"کپی کرده و جایگذاری کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\discarded.html:7
+msgid "Comment discarded"
+msgstr "نظر کنار گذاشته شد"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\discarded.html:13
+msgid "Comment can't be verified."
+msgstr "نظر را نمی توان تأیید کرد."
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\discarded.html:14
+msgid "Sorry, your comment has been automatically discarded."
+msgstr "با عرض پوزش، نظر شما به طور خودکار حذف شده است."
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\email_modal.html:8
+msgid "Please enter your email to post a comment"
+msgstr "لطفا ایمیل خود را برای ارسال نظر وارد کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\anonymous\email_modal.html:9
+#: .\venv\Lib\site-packages\comment\templates\comment\block\block_modal.html:7
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\comment_modal.html:7
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\comment_modal.html:15
+#: .\venv\Lib\site-packages\comment\templates\comment\flags\flag_modal.html:8
+#: .\venv\Lib\site-packages\comment\templates\comment\follow\follow_modal.html:8
+msgid "Close"
+msgstr "بستن"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\block\block_icon.html:4
+msgid "Unblock user"
+msgstr "رفع مسدودی کاربر"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\block\block_icon.html:4
+msgid "Block this user"
+msgstr "این کاربر را مسدود کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\block\block_modal.html:6
+msgid "Are you sure you want to block this user?"
+msgstr "مطمئنی که میخواهی دسترسی این کاربر را مسدود کنی؟"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\block\block_modal.html:16
+msgid "Reason"
+msgstr "دلیل"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\block\block_modal.html:27
+msgid "Block"
+msgstr "مسدود"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\base.html:8
+msgid "Comments"
+msgstr "نظرات"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\base.html:17
+msgid "comment on this post..."
+msgstr "نظر در مورد این پست..."
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\base.html:21
+msgid "reply to this comment..."
+msgstr "پاسخ به این نظر..."
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\comment_content.html:18
+#, python-format
+msgid "view %(username)s profile"
+msgstr "پروفایل %(username)s را مشاهده کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\comment_content.html:18
+msgid "comment by anonymous user"
+msgstr "نظر توسط کاربر ناشناس"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\comment_content.html:23
+msgid "Edited"
+msgstr "ویرایش شده"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\comment_content.html:23
+#, python-format
+msgid "Edited: %(edited_time)s ago"
+msgstr "ویرایش شده: %(edited_time)s قبل"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\comment_content.html:25
+msgid "Posted"
+msgstr ""
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\comment_content.html:25
+#, python-format
+msgid "%(posted_time)s ago"
+msgstr "%(posted_time)s قبل"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\comment_content.html:47
+msgid " Reply"
+msgid_plural " Replies"
+msgstr[0] "پاسخ"
+msgstr[1] "پاسخ"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\comment_modal.html:6
+msgid "Confirm comment deletion"
+msgstr "تایید حذف نظر"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\comment_modal.html:12
+msgid "Are you sure you want to delete this comment"
+msgstr "آیا مطمئن هستید که می خواهید این نظر را حذف کنید؟"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\comment_modal.html:22
+#: .\venv\Lib\site-packages\django\forms\formsets.py:499
+msgid "Delete"
+msgstr "حذف"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\content.html:9
+msgid "read more"
+msgstr "ادامه"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\create_comment.html:20
+msgid "Reply"
+msgstr "پاسخ"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\create_comment.html:31
+msgid "Comment Anonymously or"
+msgstr "نظر ناشناس یا"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\create_comment.html:33
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\create_comment.html:40
+msgid "Login"
+msgstr "ورود"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\create_comment.html:35
+msgid "to keep your conversations intact"
+msgstr "تا مکالمات خود را دست نخورده نگه دارید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\create_comment.html:42
+msgid "to join the discussion"
+msgstr "برای پیوستن به نظرات"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\delete_icon.html:3
+msgid "Delete comment"
+msgstr "حذف نظر"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\edit_icon.html:3
+msgid "Edit comment"
+msgstr "ویرایش نظر"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\pagination.html:2
+msgid "Page navigation"
+msgstr "پیمایش صفحه"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\pagination.html:3
+msgid "first"
+msgstr "اولین"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\pagination.html:4
+msgid "last"
+msgstr "آخرین"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\pagination.html:5
+msgid "Next"
+msgstr "بعدی"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\pagination.html:6
+msgid "Previous"
+msgstr "قبلی"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\reject_icon.html:3
+msgid "Flag rejected"
+msgstr "گزارش رد شد"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\reject_icon.html:3
+msgid "Reject the flag"
+msgstr "گزارش را رد کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\resolve_icon.html:3
+msgid "Flag resolved"
+msgstr "گزارش بسته شد"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\resolve_icon.html:3
+msgid "Resolve the flag"
+msgstr "گزارش را ببندید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\comments\urlhash.html:2
+msgid "Permalink to this comment"
+msgstr "پیوند دائمی به این نظر"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\flags\flag_icon.html:3
+msgid "Remove flag"
+msgstr "حذف گزارش"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\flags\flag_icon.html:3
+msgid "Report comment"
+msgstr "گزارش نظر"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\flags\flag_modal.html:7
+msgid "Please select a reason for flagging"
+msgstr "لطفاً دلیلی برای گزارش دهی انتخاب کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\flags\flag_modal.html:22
+msgid "Flag"
+msgstr "گزارش"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\flags\flags.html:8
+msgid "flag"
+msgstr "گزارش"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\follow\follow.html:9
+msgid "follow"
+msgstr "دنبال کردن"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\follow\follow_icon.html:3
+msgid "Unfollow this thread"
+msgstr "این نظر را لغو فالو کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\follow\follow_icon.html:3
+msgid "Follow this thread"
+msgstr "این نظر رو دنبال کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\follow\follow_modal.html:7
+msgid "Please insert your email to follow this thread"
+msgstr "لطفا ایمیل خود را برای دنبال کردن این نظر وارد کنید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\follow\follow_modal.html:28
+msgid "Follow"
+msgstr "دنبال کردن"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.html:6
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.txt:2
+msgid "Hey"
+msgstr "سلام"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.html:6
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.txt:2
+msgid ","
+msgstr ","
+
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.html:9
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.txt:4
+msgid "has added a comment at"
+msgstr "نظری در اضافه کرده است"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.html:9
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.txt:4
+msgid "to"
+msgstr "به"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\notifications\notification.html:18
+msgid "Go to site"
+msgstr "به سایت بروید"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\reactions\reactions.html:5
+msgid "like"
+msgstr "پسندیدن"
+
+#: .\venv\Lib\site-packages\comment\templates\comment\reactions\reactions.html:16
+msgid "dislike"
+msgstr "نپسندیدن"
+
+#: .\venv\Lib\site-packages\django\contrib\messages\apps.py:15
+msgid "Messages"
+msgstr "پیام ها"
+
+#: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
+msgid "Site Maps"
+msgstr "Site Maps"
+
+#: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+msgid "Static Files"
+msgstr "Static Files"
+
+#: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
+msgid "Syndication"
+msgstr "Syndication"
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: .\venv\Lib\site-packages\django\core\paginator.py:30
+msgid "…"
+msgstr "…"
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:50
+msgid "That page number is not an integer"
+msgstr "این شماره صفحه یک عدد صحیح نیست"
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:52
+msgid "That page number is less than 1"
+msgstr "این شماره صفحه کمتر از 1 است"
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:54
+msgid "That page contains no results"
+msgstr "این صفحه هیچ نتیجه ای ندارد"
+
+#: .\venv\Lib\site-packages\django\core\validators.py:22
+msgid "Enter a valid value."
+msgstr "یک مقدار معتبر وارد کنید."
+
+#: .\venv\Lib\site-packages\django\core\validators.py:104
+#: .\venv\Lib\site-packages\django\forms\fields.py:752
+msgid "Enter a valid URL."
+msgstr "یک URL معتبر وارد کنید."
+
+#: .\venv\Lib\site-packages\django\core\validators.py:165
+msgid "Enter a valid integer."
+msgstr "یک عدد صحیح معتبر وارد کنید."
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: .\venv\Lib\site-packages\django\core\validators.py:259
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+"یک ”Slug“ معتبر متشکل از حروف، اعداد، زیرخط یا خط تیره وارد کنید."
+
+#: .\venv\Lib\site-packages\django\core\validators.py:267
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+"یک ”Slug“ معتبر متشکل از حروف یونیکد، اعداد، زیرخط، یا "
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:73
+msgid "p.m."
+msgstr "ب.ظ"
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:74
+msgid "a.m."
+msgstr "ق.ظ"
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:79
+msgid "PM"
+msgstr "بعد از ظهر"
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:80
+msgid "AM"
+msgstr "قبل از ظهر"
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:152
+msgid "midnight"
+msgstr "شب"
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:154
+msgid "noon"
+msgstr "ظهر"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:7
+msgid "Monday"
+msgstr "دوشنبه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:8
+msgid "Tuesday"
+msgstr "سه شنبه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:9
+msgid "Wednesday"
+msgstr "چهارشنبه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Thursday"
+msgstr "پنجشنبه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:11
+msgid "Friday"
+msgstr "جمعه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:12
+msgid "Saturday"
+msgstr "شنبه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:13
+msgid "Sunday"
+msgstr "یکشنبه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:16
+msgid "Mon"
+msgstr "دوشنبه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:17
+msgid "Tue"
+msgstr "سه شنبه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:18
+msgid "Wed"
+msgstr "چهارشنبه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "Thu"
+msgstr "پنجشنبه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "Fri"
+msgstr "جمعه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:21
+msgid "Sat"
+msgstr "شنبه"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:22
+msgid "Sun"
+msgstr "یکشنبه"
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:8
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] "%(num)d سال"
+msgstr[1] "%(num)d سال"
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:9
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] "%(num)d ماه"
+msgstr[1] "%(num)d ماه"
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:10
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] "%(num)d هفته"
+msgstr[1] "%(num)d هفته"
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:11
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] "%(num)d روز"
+msgstr[1] "%(num)d روز"
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:12
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] "%(num)d ساعت"
+msgstr[1] "%(num)d ساعت"
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:13
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] "%(num)d دقیقه"
+msgstr[1] "%(num)d دقیقه"
+

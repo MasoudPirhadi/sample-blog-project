@@ -1,0 +1,23 @@
+{% extends "star_ratings/widget_base.html" %}
+{% load i18n %}
+
+{% block rating_detail %}
+    {% block rating_average %}
+        <div class="average-rating"><p class="rating-flex">{% trans 'average rate' %}:</p>
+            <span>{{ rating.average|floatformat:"-1" }}</span>
+        </div>
+        <div>
+            {% if not user.is_authenticated %}
+                <span class="alert-info"> {% trans 'It is required to rate' %} <a class="alert-link"
+                                                                     href="{% url 'login' %}"> {% trans 'Login' %} </a> {% trans 'become' %} </span>
+            {% endif %}
+        </div>
+    {% endblock rating_average %}
+    {% block rating_user %}
+        <div class="star-ratings-rating-user">
+            <span class='star-ratings-rating-value' data-when-null="با ثبت امتیاز خود ما را در بهتر شدن مقالات همراهی کنید">{% if user_rating %}
+                {% trans 'thanks for rate' %}{% else %}{% trans 'Help us improve the articles by rate' %}{% endif %}</span>
+        </div>
+    {% endblock rating_user %}
+    {% comment %}<div class="star-ratings-errors"></div>{% endcomment %}
+{% endblock %}
